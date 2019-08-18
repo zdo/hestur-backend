@@ -3,6 +3,7 @@ package main
 import "./hestur"
 
 func main() {
-	server := hestur.Server{}
-	server.Start()
+	game := hestur.NewGame()
+	server := hestur.NewServer(game)
+	server.Serve()
 }
